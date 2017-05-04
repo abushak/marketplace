@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\webprofiler\DrupalDataCollectorInterface.
- */
-
 namespace Drupal\webprofiler;
 
 /**
@@ -64,4 +59,9 @@ interface DrupalDataCollectorInterface {
    * @return array
    */
   public function getDrupalSettings();
+
+  /**
+   * @return mixed
+   */
+  public function getData();
 }

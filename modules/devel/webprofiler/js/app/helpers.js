@@ -9,6 +9,9 @@
       },
 
       repl = function replaceAll(string, find, replace) {
+        if (typeof string != 'string') {
+          return '';
+        }
         return string.replace(new RegExp(escapeRx(find), 'g'), replace);
       },
 
@@ -44,7 +47,9 @@
 
         line = line || 0;
 
-        return drupalSettings.webprofiler.idelink.replace("@file", file).replace("@line", line);
+        file = file.replace(drupalSettings.webprofiler.ide_link_remote, drupalSettings.webprofiler.ide_link_local);
+
+        return drupalSettings.webprofiler.ide_link.replace("@file", file).replace("@line", line);
       },
 
       classLink = function (data) {
