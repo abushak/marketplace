@@ -99,13 +99,17 @@
         </h1>
         <div class="field-product-brand">
           {% trans %}<span>by </span>{% endtrans %}
-          {{ content.field_brands }}
+          {{  }}
         </div>
         {{ content.field_old_price }}
         {{ content.field_discount_percentage }}
         {{ content.field_price }}
         <div class="field field-type-commerce-product-reference">
           <form action="" class="commerce-add-to-cart">
+
+            {{ content.field_product_variartion }}
+
+            {{ node.product.field_quantity }}
             <div class="form-item form-type-textfield form-item-quantity add-quantity-button">
               <span class="btn decrease" id="quantity-decrease"></span>
               <label for="edit-quantity">Quantity </label>
