@@ -1,7 +1,7 @@
 Installing Search API Solr Search
 ---------------------------------
 
-The search_api_solr module manages it's dependencies and class loader via
+The search_api_solr module manages its dependencies and class loader via
 composer. So if you simply downloaded this module from drupal.org you have to
 delete it and install it again via composer!
 
@@ -56,7 +56,7 @@ echo "name=$CORE" > $SOLR/server/solr/$CORE/core.properties
 
 Now you can start your Solr server:
 
-$CORE/bin/solr start
+$SOLR/bin/solr start
 
 Afterwards, go to [4] in your web browser to ensure Solr is running correctly.
 
